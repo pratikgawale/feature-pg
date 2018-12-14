@@ -8,7 +8,8 @@
     <title>Request A Demo Of Indio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="form.css" />
-    <script src="form.js"></script>
+   
+    
 </head>
 
 <body>
@@ -17,14 +18,14 @@
             <a href="#"> <img class="image1" src="./images/Screenshot (9).png" alt="err">
             </a>
         </div>
-        <div class="column header2 make-center">
+        <nav class="column header2 make-center">
             <a href="#">HOME</a>
             <a href="#">HOW IT WORKS</a>
             <a href="#">ABOUT US</a>
             <a href="#">BLOG</a>
             <button class="button">GET STARTED</button>
 
-        </div>
+        </nav>
     </div>
     <div class="row">
         <p class="heading make-center">Request A Demo Of Indio</p>
@@ -44,88 +45,111 @@
 
         </div>
         <div class="column1">
-            <div class="width80">
-                <p class="sign-up"> Sign up below to request a demo or call us at <br> <span class="make-center"><b>(415)
-                            200-1404</b></span></p>
-                <div class="column1">
-                    <label for="First name">First Name <span class="span3">*</span> </label>
-                    <input class="input-box" type="text" placeholder="First Name">
+            <form id="first_form" method="post">
+                <div class="width80">
+                    <p class="sign-up"> Sign up below to request a demo or call us at <br> <span class="make-center"><b>(415)
+                                200-1404</b></span></p>
+                    <div class="column1">
+                        <label for="First name">First Name <span class="span3">*</span> </label>
+                        <input class="input-box" id="first_name"  type="text" placeholder="First Name">
+                    </div>
+                    <div class="column1">
+                        <label for="Last name">Last Name <span class="span3">*</span> </label>
+                        <input class="input-box" id="last_name"  type="text" placeholder="Last Name">
+                    </div>
+                    <div class="pad">
+                        <label for="Email">Email <span class="span3">*</span> </label>
+                        <input class="input-box" id="email"  type="email" placeholder=" Enter your Email">
+                    </div>
+                    <div class="pad">
+                        <label for="password">Password <span class="span3">*</span> </label>
+                        <input class="input-box" id="password"  type="password" placeholder=" Enter your Password">
+                    </div>
+                    <div class="pad">
+                        <label for="password">Confirm Password <span class="span3">*</span> </label>
+                        <input class="input-box" id="confirm-password" type="password" placeholder="Confirm Password">
+                    </div>
+                    <div class="column1">
+                        <label for="phone number">Phone Number <span class="span3">*</span> </label>
+                        <input class="input-box" id="phone_number"  type="tel" placeholder="Phone Number">
+                    </div>
+                    <div class="column1">
+                        <label for="Birth Date">Birth Date <span class="span3">*</span> </label>
+                        <input class="input-box" id="date" type="date" placeholder="Birth Date">
+                    </div>
+                    <div class="pad">
+                        <label for="Country">Select Country <span class="span3">*</span> </label>
+                        <select id="dropdown" class="sel">
+                            <option value="">None</option>
+                            <option value="india">India</option>
+                            <option value="china">China</option>
+                            <option value="japan">Japan</option>
+                            <option value="audi">Indonasia</option>
+                            <option value="malasia">Malasia</option>
+                            <option value="singapur">Singapur</option>
+                            <option value="srilanka">Sri lanka</option>
+                            <option value="bangladesh">Bangladesh</option>
+    
+    
+    
+    
+                        </select>
+                    </div>
+                    <div class="column1">
+                        <label for="phone number">Gender <span class="span3">*</span> </label> <br>
+                        <form id="myform" class="myform">
+                            <input type="radio" name="gender" value="male" > Male<br>
+                            <input type="radio" name="gender" value="female"> Female<br>
+                            <input type="radio" name="gender" value="other"> Other
+                        </form>
+                    </div>
+                    <div class="column1">
+                        <label for="survey">How did you hear about survey? <span class="span3">*</span> </label>
+                        <form id="abc"  method="get">
+                            <input type="checkbox" name="survey" value="Google" > Google Search<br>
+                            <input type="checkbox" name="survey" value="BLOG"> Blog Post<br>
+                            <input type="checkbox" name="survey" value="Friend"> Friend<br>
+                            <input type="checkbox" name="survey" value="Other"> Other<br>
+                        </form>
+                    </div>
+                    <div>
+                            <input id="submit" class="button1" type="submit" value="Submit" />
+                        <!-- <button class="button1">Register</button> -->
+    
+                    </div>
                 </div>
-                <div class="column1">
-                    <label for="Last name">Last Name <span class="span3">*</span> </label>
-                    <input class="input-box" type="text" placeholder="Last Name">
-                </div>
-                <div class="pad">
-                    <label for="Email">Email <span class="span3">*</span> </label>
-                    <input class="input-box" type="email" placeholder=" Enter your Email">
-                </div>
-                <div class="pad">
-                    <label for="password">Password <span class="span3">*</span> </label>
-                    <input class="input-box" type="password" placeholder=" Enter your Password">
-                </div>
-                <div class="pad">
-                    <label for="password">Confirm Password <span class="span3">*</span> </label>
-                    <input class="input-box" type="text" placeholder="Confirm Password">
-                </div>
-                <div class="column1">
-                    <label for="phone number">Phone Number <span class="span3">*</span> </label>
-                    <input class="input-box" type="tel" placeholder="Phone Number">
-                </div>
-                <div class="column1">
-                    <label for="Birth Date">Birth Date <span class="span3">*</span> </label>
-                    <input class="input-box" type="date" placeholder="Birth Date">
-                </div>
-                <div class="pad">
-                    <label for="Country">Select Country <span class="span3">*</span> </label>
-                    <select class="sel">
-                        <option value="india">India</option>
-                        <option value="china">China</option>
-                        <option value="japan">Japan</option>
-                        <option value="audi">Indonasia</option>
-                        <option value="malasia">Malasia</option>
-                        <option value="singapur">Singapur</option>
-                        <option value="srilanka">Sri lanka</option>
-                        <option value="bangladesh">Bangladesh</option>
-
-
-
-
-                    </select>
-                </div>
-                <div class="column1">
-                    <label for="phone number">Gender <span class="span3">*</span> </label>
-                    <form>
-                        <input type="radio" name="gender" value="male" checked> Male<br>
-                        <input type="radio" name="gender" value="female"> Female<br>
-                        <input type="radio" name="gender" value="other"> Other
-                    </form>
-                </div>
-                <div class="column1">
-                    <label for="Birth Date">How did you hear about survey? <span class="span3">*</span> </label>
-                    <form action="/action_page.php" method="get">
-                        <input type="checkbox" name="survey" value="Google" checked> Google Search<br>
-                        <input type="checkbox" name="survey" value="BLOG"> Blog Post<br>
-                        <input type="checkbox" name="survey" value="Friend"> Friend<br>
-                        <input type="checkbox" name="survey" value="Other"> Other<br>
-                    </form>
-                </div>
-                <div>
-                    <button class="button1">Register</button>
-
-                </div>
-            </div>
+            </form>
 
         </div>
     </div>
-    <footer class="foot">
+    
+    <table class="table1">
+            <tr>
+              <th>first name</th>
+              <th>last name</th>
+              <th>email</th>
+              <th>password</th>
+              <th>confirm-password</th>
+              <th>phone_number</th>
+              <th>birthdate</th>
+              <th>Country</th>
+              <th>gender</th>
+              <th>survey</th>
+            </tr>
+          </table>
 
+    <footer class="foot">
         <a href=""><img class="image2" src="./images/Screenshot (9).png" alt="err"></a>
         <nav class="make-center foo">
             <a href="#">Terms Of Service</a>
             <a href="#">Privacy Policy</a>
-            <a href=""><span>© 2017 Indio Technologies,INC.(415)200-1404</span></a>
+            <span>© 2017 Indio Technologies,INC.(415)200-1404</span>
         </nav>
     </footer>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="form.js"></script>
 </body>
 
 </html>
