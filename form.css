@@ -146,21 +146,14 @@ padding: 10px 20px;
     padding: 40px;
     font-size: 22px;
     color: #737476;
+}
 
-
+.error-message{
+    color: red;
 }
 .foo span{
     color: #737476;
 }
-.error {
-    color: red;
-    margin-left: 5px;
-  }
-   
-  label.error {
-    display: inline;
-  }
-
   .table1{
       display: none;
   }
@@ -176,9 +169,6 @@ padding: 10px 20px;
     div.column1{
         width: auto;
         
-    }
-    .width80 {
-        width: 100%;
     }
     
     .img{
