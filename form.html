@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="./images/img2.png" type="image/gif" sizes="16x16">
     <title>Request A Demo Of Indio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" type="text/css" media="screen" href="form.css" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 </head>
 
@@ -18,10 +18,10 @@
         <!-- header section -->
         <header class="row">
             <div class="column">
-                <a href="#"> <img class="image1" src="./images/Screenshot (9).png" alt="err">
+                <a href="#"> <img class="logo" src="./images/Screenshot (9).png" alt="err">
                 </a>
             </div>
-            <nav class="column header2 make-center">
+            <nav class="column header-nav make-center">
                 <a href="#">HOME</a>
                 <a href="#">HOW IT WORKS</a>
                 <a href="#">ABOUT US</a>
@@ -32,67 +32,67 @@
         <!-- main section -->
         <main class="container">
             <div class="row ">
-                <p class="heading make-center ">Request A Demo Of Indio</p>
-                <img class=" img make-center" src="./images/Screenshot (11).png" alt="err">
+                <p class="main-heading make-center ">Request A Demo Of Indio</p>
+                <img class=" main-img make-center" src="./images/Screenshot (11).png" alt="err">
             </div>
             <div class="row">
-                <div class="column1">
+                <div class="form-column1">
                     <img src="./images/Screenshot (10).png" alt="err"> <br>
-                    <div class="span2">
-                        <p><span class="span1">Easy to use:</span> Lorem ipsum dolor sit amet,<br> consectetur
+                    <div class="main-text">
+                        <p><span class="text-title">Easy to use:</span> Lorem ipsum dolor sit amet,<br> consectetur
                             adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua
                             aliquip <br> ex
                             ea commodo consequat.</p>
-                        <p> <span class="span1">Simple Onboarding:</span> Lorem ipsum dolor sit amet,<br> consectetur
+                        <p> <span class="text-title">Simple Onboarding:</span> Lorem ipsum dolor sit amet,<br> consectetur
                             adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua
                             aliquip.</p>
-                        <p> <span class="span1">Advance Features: </span> Lorem ipsum dolor sit amet,<br> consectetur
+                        <p> <span class="text-title">Advance Features: </span> Lorem ipsum dolor sit amet,<br> consectetur
                             adipiscing elit, sed do eiusmod tempor. </p>
                     </div>
                 </div>
                 <!-- form -->
-                <div class="column1">
+                <div class="form-column1">
                     <form id="first_form" action="#" method="post">
                         <p class="sign-up"> Sign up below to request a demo or call us at <br> <span class="make-center"><b>(415)
                                     200-1404</b></span></p>
-                        <div class="column1">
-                            <label for="First name">First Name <span class="span3">*</span> </label>
-                            <input class="input-box" name="first_name" id="first_name" type="text" placeholder="First Name"><span class="error-message" id="firstname_Error"></span>
+                        <div class="form-column1">
+                            <label for="First name">First Name <span class="input-label">*</span> </label>
+                            <input class="input-box ng-invalid" name="first_name" id="first_name" type="text" placeholder="First Name" required /><span class="error-message" id="firstname_Error"></span>
 
                         </div>
-                        <div class="column1">
-                            <label for="Last name">Last Name <span class="span3">*</span> </label>
-                            <input class="input-box" name="last_name" id="last_name" type="text" placeholder="Last Name"
+                        <div class="form-column1">
+                            <label for="Last name">Last Name <span class="input-label">*</span> </label>
+                            <input class="input-box ng-invalid" name="last_name" id="last_name" type="text" placeholder="Last Name"
                                 ><span class="error-message" id="lastname_Error"></span>
                         </div>
-                        <div class="pad">
-                            <label for="Email">Email <span class="span3">*</span> </label>
-                            <input class="input-box" name="Email" id="email" type="email" placeholder=" Enter your Email"
+                        <div class="form-field">
+                            <label for="Email">Email <span class="input-label">*</span> </label>
+                            <input class="input-box ng-invalid" name="Email" id="email" type="email" placeholder=" Enter your Email"
                                 ><span class="error-message" id="emailError"></span>
                         </div>
-                        <div class="pad">
-                            <label for="password">Password <span class="span3">*</span> </label>
-                            <input class="input-box" name="password" id="password" type="password" placeholder=" Enter your Password"
+                        <div class="form-field">
+                            <label for="password">Password <span class="input-label">*</span> </label>
+                            <input class="input-box ng-invalid" name="password" id="password" type="password" placeholder=" Enter your Password"
                                 ><span class="error-message" id="password_Error"></span>
                         </div>
-                        <div class="pad">
-                            <label for="password">Confirm Password <span class="span3">*</span> </label>
-                            <input class="input-box" name="Re-enter password" id="confirm-password" type="password"
+                        <div class="form-field">
+                            <label for="password">Confirm Password <span class="input-label">*</span> </label>
+                            <input class="input-box ng-invalid" name="Re-enter password" id="confirm-password" type="password"
                                 placeholder="Confirm Password" ><span class="error-message" id="confirmPassword_Error"></span>
                         </div>
-                        <div class="column1">
-                            <label for="phone number">Phone Number <span class="span3">*</span> </label>
-                            <input class="input-box" name="phone number" id="phone_number" type="tel" placeholder="Phone Number"
+                        <div class="form-column1">
+                            <label for="phone number">Phone Number <span class="input-label">*</span> </label>
+                            <input class="input-box ng-invalid" name="phone number" id="phone_number" type="number" placeholder="Phone Number"
                                 ><span class="error-message" id="phoneNumber_Error"></span>
                         </div>
-                        <div class="column1">
-                            <label for="Birth Date">Birth Date <span class="span3">*</span> </label>
-                            <input class="input-box" name="date" id="date" type="text" placeholder="(dd-mm-yyyy)"
+                        <div class="form-column1">
+                            <label for="Birth Date">Birth Date <span class="input-label">*</span> </label>
+                            <input class="input-box ng-invalid" name="date" id="date" type="text" placeholder="(dd-mm-yyyy)"
                                 ><span class="error-message" id="birthdate_Error"></span>
                         </div>
-                        <div class="pad">
-                            <label for="Country">Select Country <span class="span3">*</span> </label>
-                            <select id="dropdown" class="sel">
+                        <div class="form-field">
+                            <label for="Country">Select Country <span class="input-label">*</span> </label>
+                            <select id="dropdown" class="form-select">
                                 <option value="">None</option>
                                 <option value="india">India</option>
                                 <option value="china">China</option>
@@ -108,14 +108,14 @@
 
                             </select>
                         </div>
-                        <div class="column1">
-                            <label for="phone number">Gender <span class="span3">*</span> </label> <br>
+                        <div class="form-column1">
+                            <label for="phone number">Gender <span class="input-label">*</span> </label> <br>
                             <input type="radio" name="gender" value="male"> Male<br>
                             <input type="radio" name="gender" value="female"> Female<br>
                             <input type="radio" name="gender" value="other"> Other
                         </div>
-                        <div class="column1">
-                            <label for="survey">How did you hear about survey? <span class="span3">*</span> </label>
+                        <div class="form-column1">
+                            <label for="survey">How did you hear about survey? <span class="input-label">*</span> </label> <br>
                             <input type="checkbox" name="survey" value="Google"> Google Search<br>
                             <input type="checkbox" name="survey" value="BLOG"> Blog Post<br>
                             <input type="checkbox" name="survey" value="Friend"> Friend<br>
@@ -123,15 +123,16 @@
                             
                         </div>
                         <div>
-                            <input id="submit" class="button1" type="button" value="Submit" />
+                            <input id="submit" class="form-submit" type="button" value="Submit" />
                             
                         </div>
                     </form>
                 </div>
                 <!-- table section -->
                 <div>
-                    <table id="table" class="">
-                        <tr>
+                    <table  class="">
+                            <thead>
+
                             <th>first name</th>
                             <th>last name</th>
                             <th>email</th>
@@ -141,15 +142,19 @@
                             <th>Country</th>
                             <th>gender</th>
                             <th>survey</th>
-                        </tr>
+                            <thead>
+                                    <tbody id="table">
+
+                                        </tbody>
+
                     </table>
                 </div>
             </div>
         </main>
         <!-- footer section -->
         <footer class="foot">
-            <a href=""><img class="image2" src="./images/Screenshot (9).png" alt="err"></a>
-            <nav class="foo">
+            <a href=""><img class="footer-image" src="./images/Screenshot (9).png" alt="err"></a>
+            <nav class="footer">
                 <a href="#">Terms Of Service</a>
                 <a href="#">Privacy Policy</a>
                 <span>© 2017 Indio Technologies,INC.(415)200-1404</span>
@@ -158,7 +163,6 @@
     </div>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="form.js"></script>
