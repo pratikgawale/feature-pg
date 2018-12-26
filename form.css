@@ -2,7 +2,20 @@
     box-sizing: border-box;
 
 }
-
+.container-fluid{
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container {
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 .make-center{
     justify-content: center;
     align-content: center;
@@ -22,12 +35,12 @@
     padding: 10px;
     height: 100px; 
 }
-.image1{
+.logo{
     width: auto;
     height: 100%;
     margin-left: 80px;
 }
-.column1{
+.form-column1{
     float: left;
     width: 50%;
     padding: 10px;
@@ -35,7 +48,7 @@
 
     
 }
-.header2 a{
+.header-nav a{
     padding: 28px 20px;
     text-decoration: none;
     font-family: sans-serif;
@@ -43,7 +56,7 @@
     font-size: 16px;
     
 }
-.header2{
+.header-nav{
     margin-right: 0px;
 }
 .button{
@@ -55,7 +68,7 @@
     border: none;
     font-size: 16px;
 }
-.heading{
+.main-heading{
 
     color:#506064;
     font-family: sans-serif;
@@ -63,17 +76,17 @@
 
 
 }
-.img{
+.main-img{
     margin: 0px auto;
 }
 
 
-.span1{
+.text-title{
     color: #8CECE2;
     font-size: 19px;
 
 }
-.span2{
+.main-text{
     font-size: 17px;
     margin-left: 52px;
 
@@ -94,31 +107,31 @@
 
 
 }
-.span3{
+.input-label{
  color: #6ed8ca;
 }
 
 .input-box{
- padding: 10px;
- width: 100%;
- margin-top: 10px;
- padding-left: 10px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 10px;
 }
 label{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     font-size: 18px;
 }
-.pad{
+.form-field{
     margin-left: 11px;
     margin-top: 10px;
     border-radius: 4px;
 }
-.sel{
+.form-select{
     padding: 10px;
     width: 100%;
     margin-top: 10px;
 }
-.button1{
+.form-submit{
     border-radius: 4px;
     text-align: center;
     color: white;
@@ -133,15 +146,15 @@ label{
 .column1 input{
     border-radius: 2px;
 }
-.image2{
- width: 20%;
+.footer-image{
+    width: 20%;
 }
 
-.foo {
-display: inline;
-padding: 10px 20px;
+.footer {
+    display: inline;
+    padding: 10px 20px;
 }
-.foo a{
+.footer a{
     text-decoration: none; 
     padding: 40px;
     font-size: 22px;
@@ -151,76 +164,13 @@ padding: 10px 20px;
 .error-message{
     color: red;
 }
-.foo span{
+.footer span{
     color: #737476;
 }
-  .table1{
+.table1{
       display: none;
   }
-
-@media only screen and (max-width: 768px)   {
-    body{
-        background-color:lightgray;
-    }
-    nav.column.header2 {
-        width: auto;
-      
-    }
-    div.column1{
-        width: auto;
-        
-    }
-    
-    .img{
-        justify-content: center;
-        width: auto;
-    }
-    .image2{
-        width: 100%;
-        height: auto;
-        
-    }
-    .button1{
-        margin-top: 140px;
-    }
-    .foot nav{
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 600px)   {
-    body{
-        background-color: lightblue;
-    }
-    
-    nav.column.header2 {
-        width: auto;
-      
-    }
-    div.column1{
-        width: auto;
-        
-    }
-    .width80 {
-        width: 100%;
-    }
-    
-    .img{
-        justify-content: center;
-        width: auto;
-    }
-    .image2{
-        width: 100%;
-        height: auto;
-        
-    }
-    .button1{
-        margin-top: 140px;
-    }
-    .foot nav{
-        width: 100%;
-    }
-}
-table, th, td {
+  table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
   }
@@ -228,20 +178,7 @@ table, th, td {
     padding: 5px;
     text-align: left;    
   }
-  .container-fluid{
-        width: 100%;
-        margin-left:auto;
-        margin-right: auto;
-        padding-left: 15px;
-        padding-right: 15px;
-  }
-  .container {
-    width: 80%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -257,3 +194,101 @@ table {
   }
   
   tr:nth-child(even){background-color: #f2f2f2}
+.ng-invalid{
+    border-color: red;
+}
+
+@media only screen and (max-width: 768px)   {
+    /* body{
+        background-color:lightgray;
+    } */
+    nav.column.header-nav {
+        width: auto;
+      
+    }
+    div.form-column1{
+        width: auto;
+        
+    }
+    div.table{
+        width: auto;
+    }
+    
+    header.main-img{
+        justify-content: center;
+        width: 100%;
+        margin: 0px auto;
+    }
+    .image2{
+        width: 100%;
+        height: auto;
+        
+    }
+    .form-submit{
+        margin-top: 100px;
+    }
+    .footer-image{
+        width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+    .footer_span{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 600px)   {
+    /* body{
+        background-color: lightblue;
+    } */
+    .container-fluid{
+        width: 200%;
+    }
+    header.row{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .header-nav {
+        width: auto;
+        margin: auto;
+      
+    }
+    div.form-column1{
+        width: auto;
+        
+    }
+    div.table{
+        width: auto;
+        margin: auto;
+    }
+    
+    header.main-img{
+        justify-content: center;
+        width: 100%;
+        margin: 0px auto;
+    }
+    .main-image2{
+        width: 120%;
+        height: auto;
+        
+    }
+    .main-heading{
+        width: 100%;
+        font-size: 30px;
+        
+    }
+    main{
+        width: 100%;
+    }
+    .form-submit{
+        margin-top: 100px;
+    }
+    .footer-image{
+        width: 100%;
+        height: auto;
+        padding: 30px;
+    }
+    .footer_span{
+        font-size: 13px;
+    }
+}

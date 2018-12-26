@@ -37,7 +37,7 @@
             </div>
             <div class="row">
                 <div class="form-column1">
-                    <img src="./images/Screenshot (10).png" alt="err"> <br>
+                    <img class="main-image2" src="./images/Screenshot (10).png" alt="err"> <br>
                     <div class="main-text">
                         <p><span class="text-title">Easy to use:</span> Lorem ipsum dolor sit amet,<br> consectetur
                             adipiscing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua
@@ -93,7 +93,8 @@
                         <div class="form-field">
                             <label for="Country">Select Country <span class="input-label">*</span> </label>
                             <select id="dropdown" class="form-select">
-                                <option value="">None</option>
+
+                                <option value="none">None</option>
                                 <option value="india">India</option>
                                 <option value="china">China</option>
                                 <option value="japan">Japan</option>
@@ -103,23 +104,21 @@
                                 <option value="srilanka">Sri lanka</option>
                                 <option value="bangladesh">Bangladesh</option>
 
-
-
-
-                            </select>
+                            </select><span class="error-message" id="dropdown_Error"></span>
                         </div>
-                        <div class="form-column1">
+                        <div class="form-column1" id="radio">
                             <label for="phone number">Gender <span class="input-label">*</span> </label> <br>
                             <input type="radio" name="gender" value="male"> Male<br>
                             <input type="radio" name="gender" value="female"> Female<br>
-                            <input type="radio" name="gender" value="other"> Other
+                            <input type="radio" name="gender" value="other"> Other <br><span class="error-message" id="radio_Error"></span>
                         </div>
-                        <div class="form-column1">
+                        <div class="form-column1" id="checkbox">
                             <label for="survey">How did you hear about survey? <span class="input-label">*</span> </label> <br>
                             <input type="checkbox" name="survey" value="Google"> Google Search<br>
                             <input type="checkbox" name="survey" value="BLOG"> Blog Post<br>
                             <input type="checkbox" name="survey" value="Friend"> Friend<br>
                             <input type="checkbox" name="survey" value="Other"> Other<br>
+                                <span class="error-message" id="checkbox_Error"></span>
                             
                         </div>
                         <div>
@@ -130,7 +129,7 @@
                 </div>
                 <!-- table section -->
                 <div>
-                    <table  class="">
+                    <table  class="table">
                             <thead>
 
                             <th>first name</th>
@@ -157,7 +156,7 @@
             <nav class="footer">
                 <a href="#">Terms Of Service</a>
                 <a href="#">Privacy Policy</a>
-                <span>© 2017 Indio Technologies,INC.(415)200-1404</span>
+                <span class="footer_span">© 2017 Indio Technologies,INC.(415)200-1404</span>
             </nav>
         </footer>
     </div>

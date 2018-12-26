@@ -48,7 +48,6 @@ $(document).ready(function() {
       emp_data += '<td>'+value.survey+'</td>';
       emp_data += '</tr>';
     });
-    console.log(emp_data);
     $('#table').append(emp_data);
   });
       var email_regex = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
@@ -56,11 +55,19 @@ $(document).ready(function() {
       var name_regex = /^(?!\s*$).+/;
       var pass_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       var date_regex = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
+
+      var isValid = false;
+      var confirmPassword_error = false;
+      var dropdown_error = false;
+      var radio_error = false;
+      var checkbox_error = false;
+
+
+
   function validate(fieldId, msg, maxLen, minLen, regEx){
-    var isValid = false;
    
     $(fieldId).focusout(function(){
-        alert("hi");
+        // alert("hi");
         var $this = $(this);
         var fieldLen = $(this).val().length;
         var fieldVal = $(this).val();
@@ -71,17 +78,9 @@ $(document).ready(function() {
         }else {
           $this.next('.error-message').text(msg).show();
             $this.addClass('ng-invalid');
+            isValid = true;
         }
-        if($this == $("#confirm-password").val()){
-          console.log($("#confirm-password").val());
-            if($this.val() == $("#password").val() ){
-              $this.next('.error-message').text(msg).hide();
-              $this.removeClass('ng-invalid');
-            }else{
-              $this.next('.error-message').text(msg).show();
-              $this.addClass('ng-invalid');
-            }
-        }
+          
     });
   }
     validate("#first_name","Invalid Name",20,5,name_regex);
@@ -92,8 +91,67 @@ $(document).ready(function() {
     validate("#confirm-password","Password does not match ",15,8,pass_regex);
     validate("#date","Invalid date",12  ,10,date_regex);
 
+    $("#confirmPassword_Error").hide();
 
-  });
+   $("#confirm-password").focusout(function(){
+      
+    var password = $("#password").val();
+    var confirm_password = $("#confirm-password").val();
+    if(password != confirm_password){
+      $("#confirmPassword_Error").html("Password do not match!");
+      $("#confirmPassword_Error").show(); 
+      confirmPassword_error = true;
+    }else {
+      $("#confirmPassword_Error").hide();
+      }
+    });
+    
+      
+      $("#dropdown").focusout(function(){
+      
+        var dropdown = $("#dropdown").val();
+        if('none' == dropdown){
+          $('#dropdown').val('');
+          $("#dropdown_Error").html("Invalid selection..!");
+          $("#dropdown_Error").show();
+          dropdown_error = true;
+      }else {
+        $("#dropdown_Error").hide();
+        }  
+      });
+      
+      $("#radio").focusout(function(){
+      
+        if ($('input[name="gender"]:checked').length == 0) {
+          $("#radio_Error").html("please check one field..!");
+          $("#radio_Error").show();
+          radio_error = true;
+      }else {
+        $("#radio_Error").hide();
+        }  
+      });
+      
+      $("#checkbox").focusout(function(){
+      
+        if ($("input[type='checkbox'][name='survey']:checked").length == 0) {
+          $("#checkbox_Error").html("please check one field..!");
+          $("#checkbox_Error").show();
+          checkbox_error = true;
+      }else {
+        $("#checkbox_Error").hide();
+        }  
+      });
+      $('#first_form').on('submit', function() {
+        validate();
+
+        if(isValid == false && confirmPassword_error == false && dropdown_error == false && radio_error == false && checkbox_error == false ){
+            return true;
+        }else{
+          return false;
+        }
+    }); 
+
+});
 
 
 
